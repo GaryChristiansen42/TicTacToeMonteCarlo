@@ -138,9 +138,9 @@ Node* getNewChild(Node* node)
 		return NULL;
 	else //Pick random child
 	{
-		int choice = rand() % possibleChildren.size();
+		unsigned int choice = rand() % possibleChildren.size();
 		Node* chosenChild = possibleChildren[choice];
-		for(int i = 0; i < possibleChildren.size(); i++)
+		for(unsigned int i = 0; i < possibleChildren.size(); i++)
 			if(i != choice)
 				delete possibleChildren[i];
 		return chosenChild;
@@ -198,7 +198,7 @@ void backup(Node* v, int reward)
 	}
 }
 
-Node* UCTSearch(Node* root, Board* currentBoard)
+Node* UCTSearch(Node* root)
 {
 	for(int i = 0; i < MAX_SIMULATIONS; i++)
 	{

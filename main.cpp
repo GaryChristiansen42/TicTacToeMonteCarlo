@@ -59,7 +59,7 @@ void showTree(ofstream* file, Node* root, int numTabs)
 
 void computerMove(Node** currentNode, Board* b)
 {
-	Node* newCurrentNode = UCTSearch((*currentNode), b);
+	Node* newCurrentNode = UCTSearch((*currentNode));
 	(*currentNode) = newCurrentNode;
 	b->makeMove((*currentNode)->move);
 
@@ -69,7 +69,7 @@ void computerMove(Node** currentNode, Board* b)
 	myfile.close();*/
 }
 
-int main(int in, char* args[])
+int main()
 {
 	cout << "TicTacToe MonteCarloAI\n";
 
