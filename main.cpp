@@ -75,8 +75,7 @@ int main(int in, char* args[])
 
 	srand ((unsigned int)time(NULL));
 	
-	Board* b = new Board();
-	b->initialize(O);
+	Board* b = new Board(O);
 	
 	Node *currentNode;
 	Move m(-1, -1);
